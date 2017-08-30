@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: askbot
+spec:
+  rules:
+  - host: "askbot.example.org"
+    http:
+      paths:
+      - backend:
+          serviceName: askbot
+          servicePort: 80
